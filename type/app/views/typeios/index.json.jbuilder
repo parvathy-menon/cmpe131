@@ -1,0 +1,1 @@
+json.array! @typeios, partial: 'typeios/typeio', as: :typeio

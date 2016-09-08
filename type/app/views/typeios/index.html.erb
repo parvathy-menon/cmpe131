@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Typeios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @typeios.each do |typeio| %>
+      <tr>
+        <td><%= typeio.username %></td>
+        <td><%= typeio.body %></td>
+        <td><%= link_to 'Show', typeio %></td>
+        <td><%= link_to 'Edit', edit_typeio_path(typeio) %></td>
+        <td><%= link_to 'Destroy', typeio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Typeio', new_typeio_path %>

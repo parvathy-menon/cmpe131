@@ -7,47 +7,65 @@
   float:left;
 }
 
-#typeio-list-info div{
-  width:200px;
-  float: left;
-  margin:10px;
-}
-
 #typeio-list{
   float:none;
 }
 
-.typeio-cell{
-  float:left;
+#typeio-header h1
+{
+  text-align: center;
+  font-size: 36px;
 }
 
-.typeio-cell .typeio-list-username, .typeio-list-body, .typeio-list-date{
-  width:200px;
+.typeio-cell{
+  background-image: url("blackpaper-background.jpg");
+  border:2px solid #222222;
   float:left;
   word-wrap: break-word;
   margin:10px;
+  width:20%;
 }
 
-.typeio-button{
+.typeio-username p, .typeio-date p
+{
+  margin-top:10px;
+  margin-bottom: 0px;
+}
+
+.typeio-body p
+{
+  font-size: 24px;
+  line-height: 1em;
+}
+
+.typeio-button
+{
   width:100px;
   border:1px solid black;
   text-align: center;
   float:left;
 }
 
-.typeio-button p{
+.typeio-button p
+{
   margin:5px;
   padding:0px;
 }
 
-.typeio-button-new{
-  width:100px;
+.typeio-button-new
+{
+  background-color: #0197f6;
   border:1px solid black;
   text-align: center;
   float:left;
 }
 
-.typeio-button-new p{
+.typeio-button-new a
+{
+  float:left;
   margin:5px;
-  padding:0px;
+  color:#FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding:5px;
 }

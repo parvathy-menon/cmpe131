@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+body
+{
+  background-image: url("corkboard-background.png");
+  background-color: #0c1e1b;
+}
+
+ h1, h2, h3, p, a, label
+ {
+   font-family: 'Josefin Sans', sans-serif;
+ }
+
+ p, label
+ {
+   color:#68c5db;
+ }
+
+ a
+ {
+   color:#0197f6;
+ }
+
+ h1, h2, h3
+ {
+   color:#0197f6;
+ }
+
+ .important-text
+ {
+   color:#d7263d;
+ }

@@ -10,9 +10,18 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+
+color palette:
+#0c1e1b -
+#68c5db -
+#0197f6 -
+#d7263d - red
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
 body
 {
   background-image: url("corkboard-background.png");
@@ -32,6 +41,13 @@ body
  a
  {
    color:#0197f6;
+   text-decoration: none;
+ }
+
+ a:hover
+ {
+   text-decoration: none;
+   background-color: none;
  }
 
  h1, h2, h3

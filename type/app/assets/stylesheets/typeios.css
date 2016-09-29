@@ -1,14 +1,11 @@
 #typeio-list-container{
-  float:left;
 }
 
 #typeio-list-info{
   padding:0px;
-  float:left;
 }
 
 #typeio-list{
-  float:none;
 }
 
 #typeio-header h1
@@ -18,12 +15,13 @@
 }
 
 .typeio-cell{
-  background-image: url("blackpaper-background.jpg");
-  border:2px solid #222222;
-  float:left;
+  background-color: #111111;
+  border:4px solid #222222;
   word-wrap: break-word;
+  float:left;
   margin:10px;
   width:20%;
+  padding: 5px;
 }
 
 .typeio-username p, .typeio-date p
@@ -41,28 +39,48 @@
 .typeio-button
 {
   width:100px;
-  border:1px solid black;
   text-align: center;
+  background-color: #0197f6;
+  margin:5px;
+  border-radius: 5px;
   float:left;
 }
 
-.typeio-button p
+.typeio-delete-button
+{
+  width:100px;
+  text-align: center;
+  margin:5px;
+  border-radius: 2px;
+  background-color: #d7263d;
+  float:left;
+}
+
+#typeio-button-container
+{
+  margin-left: 9px;
+  display: block;
+  float: left;
+}
+
+.typeio-button p, .typeio-delete-button p, .typeio-button a, .typeio-delete-button a
 {
   margin:5px;
   padding:0px;
+  color: #000000;
 }
 
 .typeio-button-new
 {
   background-color: #0197f6;
-  border:1px solid black;
   text-align: center;
+  border-radius: 2px;
   float:left;
+  padding:7px;
 }
 
 .typeio-button-new a
 {
-  float:left;
   margin:5px;
   color:#FFFFFF;
   text-align: center;

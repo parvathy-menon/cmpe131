@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'posts/group'
+
+  get 'posts/account'
+
+  get 'posts/settings'
+
   root 'welcome#index'
 
   resources :typeios

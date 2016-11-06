@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
-  get 'posts/group'
-
-  get 'posts/account'
-
-  get 'posts/settings'
-
+  devise_for :users
   root 'welcome#index'
 
   resources :typeios

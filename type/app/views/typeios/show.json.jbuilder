@@ -1,0 +1,1 @@
+json.partial! "typeios/typeio", typeio: @typeio

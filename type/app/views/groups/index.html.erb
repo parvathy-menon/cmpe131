@@ -6,7 +6,6 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Create date</th>
       <th>Created by</th>
       <th colspan="3"></th>
     </tr>
@@ -16,7 +15,6 @@
     <% @groups.each do |group| %>
       <tr>
         <td><%= group.name %></td>
-        <td><%= group.create_date %></td>
         <td><%= group.created_by %></td>
         <td><%= link_to 'Show', group %></td>
         <td><%= link_to 'Edit', edit_group_path(group) %></td>

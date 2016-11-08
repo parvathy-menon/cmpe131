@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161106234813) do
+ActiveRecord::Schema.define(version: 20161108183214) do
+
+  create_table "groups", force: :cascade do |t|
+    t.string   "name"
+    t.date     "create_date"
+    t.string   "created_by"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "typeios", force: :cascade do |t|
     t.string   "username"

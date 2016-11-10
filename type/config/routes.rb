@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  resources :groups
+
+	root 'welcome#index'
+
+	resources :groups
   devise_for :users, :controllers => { registrations: 'registrations' }
-  root 'welcome#index'
+
 
   resources :typeios
   resources :users do

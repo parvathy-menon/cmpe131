@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
+
+	root 'welcome#index'
+
+	resources :groups
+=======
   resources :bulletin_boards
   resources :groups
+>>>>>>> master
   devise_for :users, :controllers => { registrations: 'registrations' }
-  root 'welcome#index'
+
 
   resources :typeios
   resources :users do

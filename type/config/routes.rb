@@ -1,13 +1,10 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-
+  resources :comments
 	root 'welcome#index'
 
 	resources :groups
-=======
   resources :bulletin_boards
   resources :groups
->>>>>>> master
   devise_for :users, :controllers => { registrations: 'registrations' }
 
 

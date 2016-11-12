@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   resources :bulletin_boards
   resources :groups
   devise_for :users, :controllers => { registrations: 'registrations' }

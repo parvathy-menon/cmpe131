@@ -6,5 +6,6 @@ class User < ActiveRecord::Base
 
          belongs_to :bulletin_board
          has_many :typeio
+         has_many :comment
 
 end

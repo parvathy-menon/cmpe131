@@ -24,7 +24,10 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
-    @comment = Comment.new(comment_params)
+    @typeio = Typeio.find(params[:typeio_id])
+    @comment = @typeio.comments.create(comment_params)
+    @comment.user = current_user
+    
 
     respond_to do |format|
       if @comment.save

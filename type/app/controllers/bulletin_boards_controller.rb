@@ -5,11 +5,13 @@ class BulletinBoardsController < ApplicationController
   # GET /bulletin_boards.json
   def index
     @bulletin_boards = BulletinBoard.all
+    
   end
 
   # GET /bulletin_boards/1
   # GET /bulletin_boards/1.json
   def show
+    @typeios = current_user.typeio
   end
 
   # GET /bulletin_boards/new

@@ -28,7 +28,7 @@ class TypeiosController < ApplicationController
       # @typeio = @bulletin_board.typeios.create(typeio_params)
       @typeio = Typeio.new(typeio_params)
       @typeio.user = current_user
-
+	
     respond_to do |format|
       if @typeio.save
         format.html { redirect_to @typeio, notice: 'Typeio was successfully created.' }

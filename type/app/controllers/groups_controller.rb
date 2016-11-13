@@ -27,6 +27,8 @@ class GroupsController < ApplicationController
     @group = Group.new(group_params)
     b = BulletinBoard.create
     @group.bulletin_board = b
+    @user = current_user
+    @user.groups << @group
 
     respond_to do |format|
       if @group.save

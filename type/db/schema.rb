@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161112233804) do
+ActiveRecord::Schema.define(version: 20161113051144) do
 
   create_table "bulletin_boards", force: :cascade do |t|
     t.integer  "num_posts"
@@ -54,6 +54,9 @@ ActiveRecord::Schema.define(version: 20161112233804) do
     t.datetime "updated_at",                          null: false
     t.string   "first_name"
     t.string   "last_name"
+    t.integer  "bulletin_board_id"
   end
+
+  add_index "users", ["bulletin_board_id"], name: "index_users_on_bulletin_board_id"
 
 end

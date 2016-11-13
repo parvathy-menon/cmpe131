@@ -1,8 +1,11 @@
 class RegistrationsController < Devise::RegistrationsController
     def create
         super
-        resource.bulletin_board = BulletinBoard.create
+				b = BulletinBoard.create
+				resource.update bulletin_board: b
     end
+
+		
   private
   
   def sign_up_params

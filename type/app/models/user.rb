@@ -5,5 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
          belongs_to :bulletin_board
+         has_many :typeio
 
 end

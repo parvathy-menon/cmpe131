@@ -2,7 +2,6 @@
   <% if @typeio.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@typeio.errors.count, "error") %> prohibited this typeio from being saved:</h2>
-
       <ul>
       <% @typeio.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -22,3 +21,5 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+

@@ -4,5 +4,6 @@ class Typeio < ActiveRecord::Base
   
   belongs_to :user
   has_many: comment
+  belongs_to: bulletin_board
   
 end

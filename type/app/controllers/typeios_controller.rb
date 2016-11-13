@@ -24,7 +24,8 @@ class TypeiosController < ApplicationController
   # POST /typeios
   # POST /typeios.json
   def create
-    @typeio = Typeio.new(typeio_params)
+    @bulletin_board = BulletinBoard.find(params[:bulletin_board_id])
+    @typeio = @bulletin_board.typeios.create(typeio_params)
     @typeio.user = current_user
 
     respond_to do |format|

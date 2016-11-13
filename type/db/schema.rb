@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161113051144) do
+ActiveRecord::Schema.define(version: 20161113191815) do
 
   create_table "bulletin_boards", force: :cascade do |t|
     t.integer  "num_posts"
@@ -29,9 +29,12 @@ ActiveRecord::Schema.define(version: 20161113051144) do
   create_table "groups", force: :cascade do |t|
     t.string   "name"
     t.string   "created_by"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "bulletin_board_id"
   end
+
+  add_index "groups", ["bulletin_board_id"], name: "index_groups_on_bulletin_board_id"
 
   create_table "typeios", force: :cascade do |t|
     t.text     "body"

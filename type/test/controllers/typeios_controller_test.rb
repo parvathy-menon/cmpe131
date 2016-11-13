@@ -18,7 +18,7 @@ class TypeiosControllerTest < ActionController::TestCase
 
   test "should create typeio" do
     assert_difference('Typeio.count') do
-      post :create, typeio: { body: @typeio.body, username: @typeio.username }
+      post :create, typeio: { body: @typeio.body}
     end
 
     assert_redirected_to typeio_path(assigns(:typeio))
@@ -35,7 +35,7 @@ class TypeiosControllerTest < ActionController::TestCase
   end
 
   test "should update typeio" do
-    patch :update, id: @typeio, typeio: { body: @typeio.body, username: @typeio.username }
+    patch :update, id: @typeio, typeio: { body: @typeio.body}
     assert_redirected_to typeio_path(assigns(:typeio))
   end
 

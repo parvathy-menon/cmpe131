@@ -25,6 +25,7 @@ class TypeiosController < ApplicationController
   # POST /typeios.json
   def create
     @typeio = Typeio.new(typeio_params)
+    @typeio.user = current_user
 
     respond_to do |format|
       if @typeio.save
@@ -69,6 +70,6 @@ class TypeiosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def typeio_params
-      params.require(:typeio).permit(:username, :body)
+      params.require(:typeio).permit(:body)
     end
 end

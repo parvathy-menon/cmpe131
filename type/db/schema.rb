@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161113201510) do
+ActiveRecord::Schema.define(version: 20161113203051) do
 
   create_table "bulletin_boards", force: :cascade do |t|
     t.integer  "num_posts"
@@ -40,6 +40,14 @@ ActiveRecord::Schema.define(version: 20161113201510) do
   end
 
   add_index "groups", ["bulletin_board_id"], name: "index_groups_on_bulletin_board_id"
+
+  create_table "groups_users", id: false, force: :cascade do |t|
+    t.integer "group_id"
+    t.integer "user_id"
+  end
+
+  add_index "groups_users", ["group_id"], name: "index_groups_users_on_group_id"
+  add_index "groups_users", ["user_id"], name: "index_groups_users_on_user_id"
 
   create_table "typeios", force: :cascade do |t|
     t.text     "body"

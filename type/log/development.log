@@ -31142,3 +31142,456 @@ Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-11-13 12:53:59 -0800
 
 
 Started GET "/assets/corkboard-background.png" for ::1 at 2016-11-13 12:53:59 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-13 12:58:12 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 850ms (Views: 820.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/defaults.css" for 127.0.0.1 at 2016-11-13 12:58:13 -0800
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/defaults.css"):
+  actionpack (4.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jay/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/jay/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/jay/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.4ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (38.5ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.6ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (207.0ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (107.0ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (165.5ms)
+
+
+Started GET "/javascripts/defaults.js" for 127.0.0.1 at 2016-11-13 12:58:13 -0800
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/defaults.js"):
+  actionpack (4.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jay/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/jay/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/jay/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.2ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (69.9ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.7ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (74.8ms)
+
+
+Started GET "/assets/bootstrap-sprockets" for 127.0.0.1 at 2016-11-13 12:58:14 -0800
+
+
+Started GET "/assets/bootstrap" for 127.0.0.1 at 2016-11-13 12:58:14 -0800
+
+
+Started GET "/assets/corkboard-background.png" for 127.0.0.1 at 2016-11-13 12:58:14 -0800
+
+
+Started GET "/groups" for 127.0.0.1 at 2016-11-13 12:58:59 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GroupsController#index as HTML
+  [1m[35mGroup Load (0.2ms)[0m  SELECT "groups".* FROM "groups"
+  Rendered groups/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 725ms (Views: 692.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stylesheets/defaults.css" for 127.0.0.1 at 2016-11-13 12:59:00 -0800
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/defaults.css"):
+  actionpack (4.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jay/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/jay/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/jay/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (32.1ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (22.3ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (51.1ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.5ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (251.3ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (7.1ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (5.3ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (94.4ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (150.1ms)
+
+
+Started GET "/assets/bulletin_boards.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-13 12:59:00 -0800
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-13 12:59:00 -0800
+
+
+Started GET "/assets/scaffolds.self-750183741cf173a30b60e73fc228c967a29ac93cdb5ea0a84f0ecb2edae91fc9.css?body=1" for 127.0.0.1 at 2016-11-13 12:59:00 -0800
+
+
+Started GET "/assets/groups.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-13 12:59:00 -0800
+
+
+Started GET "/javascripts/defaults.js" for 127.0.0.1 at 2016-11-13 12:59:00 -0800
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/defaults.js"):
+  actionpack (4.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jay/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/jay/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/jay/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (14.9ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (89.8ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.0ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (113.7ms)
+
+
+Started GET "/assets/typeios.self-a488e927d14c2f800b5cb4081d44801e932a5fe48e7fd013f35b41ecb6e0e6cc.css?body=1" for 127.0.0.1 at 2016-11-13 12:59:00 -0800
+
+
+Started GET "/assets/welcome.self-d5c123bba8c4a66272c0afb9b101929f6c42eaa31088ceffba31e8399655f9f9.css?body=1" for 127.0.0.1 at 2016-11-13 12:59:00 -0800
+
+
+Started GET "/assets/application.self-783e0312e5cf4a9611f108525e0aade145d88af55c1537485443f4141f01bb11.css?body=1" for 127.0.0.1 at 2016-11-13 12:59:00 -0800
+
+
+Started GET "/assets/bootstrap-sprockets" for 127.0.0.1 at 2016-11-13 12:59:00 -0800
+
+
+Started GET "/assets/bootstrap" for 127.0.0.1 at 2016-11-13 12:59:00 -0800
+
+
+Started GET "/assets/corkboard-background.png" for 127.0.0.1 at 2016-11-13 12:59:00 -0800
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2016-11-13 12:59:57 -0800
+Processing by GroupsController#new as HTML
+  Rendered groups/_form.html.erb (9.6ms)
+  Rendered groups/new.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 72ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/defaults.css" for 127.0.0.1 at 2016-11-13 12:59:57 -0800
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/defaults.css"):
+  actionpack (4.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jay/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/jay/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/jay/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.6ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.5ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (101.2ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (48.7ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (4.2ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (80.2ms)
+
+
+Started GET "/javascripts/defaults.js" for 127.0.0.1 at 2016-11-13 12:59:57 -0800
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/defaults.js"):
+  actionpack (4.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jay/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/jay/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/jay/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.6ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (85.7ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (50.3ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (6.0ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (4.0ms)
+  Rendered /home/jay/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (97.3ms)
+
+
+Started GET "/assets/bootstrap-sprockets" for 127.0.0.1 at 2016-11-13 12:59:57 -0800
+
+
+Started GET "/assets/bootstrap" for 127.0.0.1 at 2016-11-13 12:59:57 -0800
+
+
+Started GET "/assets/corkboard-background.png" for 127.0.0.1 at 2016-11-13 12:59:57 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DropCreatedbyFromGroups (20161113210131)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "agroups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_by" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "bulletin_board_id" integer) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_groups_on_bulletin_board_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_groups_on_bulletin_board_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "tindex_agroups_on_bulletin_board_id" ON "agroups" ("bulletin_board_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "groups"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "agroups" ("id","name","created_by","created_at","updated_at","bulletin_board_id") VALUES (1, 'one', 'two', '2016-11-08 19:07:44.174673', '2016-11-08 19:07:44.174673', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "agroups" ("id","name","created_by","created_at","updated_at","bulletin_board_id") VALUES (2, 'sdf', 'sdf', '2016-11-13 19:21:43.040260', '2016-11-13 19:21:43.040260', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "agroups" ("id","name","created_by","created_at","updated_at","bulletin_board_id") VALUES (3, 'wlekrjwer', 'wlerkjwer', '2016-11-13 19:23:02.446357', '2016-11-13 19:23:02.446357', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "agroups" ("id","name","created_by","created_at","updated_at","bulletin_board_id") VALUES (4, 'werkjhwer', 'lwkejrwer', '2016-11-13 19:24:47.023726', '2016-11-13 19:24:47.023726', 29)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "agroups" ("id","name","created_by","created_at","updated_at","bulletin_board_id") VALUES (5, 'hi', 'hi', '2016-11-13 20:52:09.346294', '2016-11-13 20:52:09.346294', 34)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "agroups" ("id","name","created_by","created_at","updated_at","bulletin_board_id") VALUES (6, 'test2', 'test2', '2016-11-13 20:53:56.681191', '2016-11-13 20:53:56.681191', 35)[0m
+  [1m[35m (5.3ms)[0m  DROP TABLE "groups"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "bulletin_board_id" integer) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_agroups_on_bulletin_board_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_agroups_on_bulletin_board_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_groups_on_bulletin_board_id" ON "groups" ("bulletin_board_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "agroups"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "groups" ("id","name","created_at","updated_at","bulletin_board_id") VALUES (1, 'one', '2016-11-08 19:07:44.174673', '2016-11-08 19:07:44.174673', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "groups" ("id","name","created_at","updated_at","bulletin_board_id") VALUES (2, 'sdf', '2016-11-13 19:21:43.040260', '2016-11-13 19:21:43.040260', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "groups" ("id","name","created_at","updated_at","bulletin_board_id") VALUES (3, 'wlekrjwer', '2016-11-13 19:23:02.446357', '2016-11-13 19:23:02.446357', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "groups" ("id","name","created_at","updated_at","bulletin_board_id") VALUES (4, 'werkjhwer', '2016-11-13 19:24:47.023726', '2016-11-13 19:24:47.023726', 29)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "groups" ("id","name","created_at","updated_at","bulletin_board_id") VALUES (5, 'hi', '2016-11-13 20:52:09.346294', '2016-11-13 20:52:09.346294', 34)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "groups" ("id","name","created_at","updated_at","bulletin_board_id") VALUES (6, 'test2', '2016-11-13 20:53:56.681191', '2016-11-13 20:53:56.681191', 35)
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "agroups"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20161113210131"]]
+  [1m[36m (10.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_typeio_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_typeio_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_groups_on_bulletin_board_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_groups_on_bulletin_board_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_groups_users_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_groups_users_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_groups_users_on_group_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_groups_users_on_group_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_typeios_on_bulletin_board_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_typeios_on_bulletin_board_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_typeios_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_typeios_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_bulletin_board_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_bulletin_board_id' AND type='index'
+

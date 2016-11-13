@@ -4,7 +4,7 @@ class TypeiosController < ApplicationController
   # GET /typeios
   # GET /typeios.json
   def index
-    @typeios = Typeio.all
+    @typeios = current_user.typeio
   end
 
   # GET /typeios/1
@@ -24,9 +24,10 @@ class TypeiosController < ApplicationController
   # POST /typeios
   # POST /typeios.json
   def create
-    @bulletin_board = BulletinBoard.find(params[:bulletin_board_id])
-    @typeio = @bulletin_board.typeios.create(typeio_params)
-    @typeio.user = current_user
+      # @bulletin_board = BulletinBoard.find(params[:bulletin_board_id])
+      # @typeio = @bulletin_board.typeios.create(typeio_params)
+      @typeio = Typeio.new(typeio_params)
+      @typeio.user = current_user
 
     respond_to do |format|
       if @typeio.save

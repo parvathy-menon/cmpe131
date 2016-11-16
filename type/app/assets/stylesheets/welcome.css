@@ -19,9 +19,26 @@
 #welcome-banner h1
 {
   font-size: 54px;
+  margin-bottom: 20px;
 }
 
 #welcome-banner h3
 {
   font-size: 36px;
+}
+
+#welcome-buttons
+{
+  margin: 0 auto;
+}
+
+#welcome-buttons h3
+{
+  display:inline;
+  margin-right:40px;
+}
+
+#welcome-buttons img
+{
+  margin-left:40px;
 }

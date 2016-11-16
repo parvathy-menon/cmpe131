@@ -1,7 +1,9 @@
 <div class = "center" id="welcome-banner">
 
-	<h1>Welcome to TypeIO</h1>
-	<h5><%= link_to 'Log in', new_user_session_path %></h5>
-	<h5><%= link_to 'Register',  new_user_registration_path  %></h5>
-	
+	<h1>Welcome to <%= image_tag 'logo-full-blue-large.png', style:'height:69px; margin-bottom:-15px;' %></h1>
+	<div id="welcome-buttons">
+		<%= image_tag 'right-arrow-line-glyph.png', class:"med-glyph" %><h3><%= link_to 'Log in', new_user_session_path %></h3>
+		<%= image_tag 'plus-box-glyph.png', class:"med-glyph" %><h3><%= link_to 'Register',  new_user_registration_path  %></h3>
+	</div>
+
 </div>

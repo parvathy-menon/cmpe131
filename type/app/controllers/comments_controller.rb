@@ -1,10 +1,10 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_typeio, only: [:create, :index]
   # GET /comments
   # GET /comments.json
   def index
-    @comments = Comment.all
+    @comments = @typeio.comment
   end
 
   # GET /comments/1
@@ -24,16 +24,16 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
-    @typeio = Typeio.find(params[:typeio_id])
-    @comment = @typeio.comments.create(comment_params)
+    @comment = Comment.new(comment_params)
+    @comment.typeio = @typeio
     @comment.user = current_user
-    
+   
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
+        format.html { redirect_to typeio_comments_url, notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @comment }
-      else
+      
         format.html { render :new }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
@@ -69,7 +69,9 @@ class CommentsController < ApplicationController
     def set_comment
       @comment = Comment.find(params[:id])
     end
-
+    def set_typeio
+      @typeio = Typeio.find(params[:typeio_id])
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
       params.require(:comment).permit(:likes, :body)

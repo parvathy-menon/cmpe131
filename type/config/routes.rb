@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  resources :comments
+
   root 'welcome#index'
 
   resources :groups
-  resources :typeios
+  resources :typeios do 
+	resources :comments
+  end
   resources :bulletin_boards do
 	resources :typeios
   end
@@ -11,7 +13,7 @@ Rails.application.routes.draw do
   resources :groups
   devise_for :users, :controllers => { registrations: 'registrations' }
 
-
+  resources :comments
 
   resources :users do
     resources :typeios

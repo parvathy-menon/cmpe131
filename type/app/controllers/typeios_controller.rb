@@ -16,8 +16,6 @@ class TypeiosController < ApplicationController
   # GET /typeios/new
   def new
     @typeio = Typeio.new
-    #@bulletin_board = BulletinBoard.find(params[:bulletin_board_id])
-    #@typeio.bulletin_board = @bulletin_board
   end
 
   # GET /typeios/1/edit
@@ -27,8 +25,6 @@ class TypeiosController < ApplicationController
   # POST /typeios
   # POST /typeios.json
   def create 
-      #@bulletin_board = BulletinBoard.find(47)
-      #@typeio = @bulletin_board.typeios.create(typeio_params)
       @typeio = Typeio.new(typeio_params)
       @typeio.bulletin_board = @bulletin_board
       @typeio.user = current_user

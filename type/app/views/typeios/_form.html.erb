@@ -1,4 +1,4 @@
-<%= form_for(@typeio) do |f| %>
+<%= form_for(@typeio, :url => bulletin_board_typeios_path(BulletinBoard.find(params[:bulletin_board_id]))) do |f| %>
   <% if @typeio.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@typeio.errors.count, "error") %> prohibited this typeio from being saved:</h2>

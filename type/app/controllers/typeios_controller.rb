@@ -1,5 +1,6 @@
 class TypeiosController < ApplicationController
   before_action :set_typeio, only: [:show, :edit, :update, :destroy]
+  before_action :set_bulletin_board, only: [:create]
 
   # GET /typeios
   # GET /typeios.json
@@ -15,6 +16,8 @@ class TypeiosController < ApplicationController
   # GET /typeios/new
   def new
     @typeio = Typeio.new
+    #@bulletin_board = BulletinBoard.find(params[:bulletin_board_id])
+    #@typeio.bulletin_board = @bulletin_board
   end
 
   # GET /typeios/1/edit
@@ -23,15 +26,16 @@ class TypeiosController < ApplicationController
 
   # POST /typeios
   # POST /typeios.json
-  def create
-      # @bulletin_board = BulletinBoard.find(params[:bulletin_board_id])
-      # @typeio = @bulletin_board.typeios.create(typeio_params)
+  def create 
+      #@bulletin_board = BulletinBoard.find(47)
+      #@typeio = @bulletin_board.typeios.create(typeio_params)
       @typeio = Typeio.new(typeio_params)
+      @typeio.bulletin_board = @bulletin_board
       @typeio.user = current_user
 	
     respond_to do |format|
       if @typeio.save
-        format.html { redirect_to @typeio, notice: 'Typeio was successfully created.' }
+        format.html { redirect_to @typeio.bulletin_board, notice: 'Typeio was successfully created.' }
         format.json { render :show, status: :created, location: @typeio }
       else
         format.html { render :new }
@@ -69,7 +73,9 @@ class TypeiosController < ApplicationController
     def set_typeio
       @typeio = Typeio.find(params[:id])
     end
-
+    def set_bulletin_board
+      @bulletin_board = BulletinBoard.find(params[:bulletin_board_id])
+    end 
     # Never trust parameters from the scary internet, only allow the white list through.
     def typeio_params
       params.require(:typeio).permit(:body)

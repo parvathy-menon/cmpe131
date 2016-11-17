@@ -13,7 +13,7 @@
         <div class="typeio-date"><p><i>On <%= friendly_date(typeio.created_at) %></p></i></div>
         <div class="typeio-body"><p><%= typeio.body %></p></div>
         <div id="typeio-button-container">
-          <div class="typeio-button"><p><%= link_to 'Show', typeio %></p></div>
+         <!-- <div class="typeio-button"><p><%= link_to 'Show', typeio %></p></div> -->
           <div class="typeio-button"><p><%= link_to 'Edit', edit_typeio_path(typeio) %></p></div>
           <div class="typeio-button"><p><%= link_to 'Comments', typeio_comments_path(typeio)%></p></div>
           <div class="typeio-delete-button"><p><%= link_to 'Destroy', typeio, method: :delete, data: { confirm: 'Are you sure?' } %></p></div>

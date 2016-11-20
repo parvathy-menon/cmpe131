@@ -11,7 +11,7 @@ class BulletinBoardsController < ApplicationController
   # GET /bulletin_boards/1
   # GET /bulletin_boards/1.json
   def show
-    @typeios = current_user.typeio
+    @typeios = @bulletin_board.typeio
   end
 
   # GET /bulletin_boards/new

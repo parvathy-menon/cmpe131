@@ -5,7 +5,7 @@ class TypeiosController < ApplicationController
   # GET /typeios
   # GET /typeios.json
   def index
-    @typeios = current_user.typeio
+    @typeios = bulletin_board.typeios
   end
 
   # GET /typeios/1

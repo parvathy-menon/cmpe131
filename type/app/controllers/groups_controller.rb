@@ -1,10 +1,12 @@
 class GroupsController < ApplicationController
-  before_action :set_group, only: [:show, :edit, :update, :destroy]
+  before_action :set_group, only: [:show, :edit, :update, :destroy, :add]
 
   # GET /groups
   # GET /groups.json
   def index
     @groups = current_user.groups
+  end
+  def add
   end
 
   # GET /groups/1
@@ -44,15 +46,21 @@ class GroupsController < ApplicationController
   # PATCH/PUT /groups/1
   # PATCH/PUT /groups/1.json
   def update
+    @group = Group.find(params[:id])
+    emailCheck = params[:email]
     respond_to do |format|
-      if @group.update(group_params)
-        format.html { redirect_to @group, notice: 'Group was successfully updated.' }
-        format.json { render :show, status: :ok, location: @group }
-      else
-        format.html { render :edit }
-        format.json { render json: @group.errors, status: :unprocessable_entity }
-      end
-    end
+ 	 if User.exists?(email: emailCheck) #MAKE SURE USER EXISTS
+	    @user = User.where(email: emailCheck)
+            if !@group.users.exists?(@user) #AVOID DUPLICATES
+    	    	@group.users << @user      #ADD USER TO JOIN TABLE
+            end
+	    format.html { redirect_to groups_path, notice: 'User was successfully added to the group.' }
+            format.json { render :index, status: :ok, location: @group }
+ 	  else
+            format.html { redirect_to groups_path,  notice: 'USER DOES NOT EXIST -- CHANGE COLOR?' }
+            format.json { render :index, status: :unprocessable_entity, location: @group }
+          end
+       end
   end
 
   # DELETE /groups/1
@@ -73,6 +81,6 @@ class GroupsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def group_params
-      params.require(:group).permit(:name, :create_date, :created_by)
+      params.require(:group).permit(:name, :create_date, :created_by, :email)
     end
 end

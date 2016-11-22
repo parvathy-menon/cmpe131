@@ -2,7 +2,11 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  resources :groups
+  resources :groups do
+	member do
+	   get "add"
+	end 
+  end
   resources :typeios do 
 	resources :comments
   end

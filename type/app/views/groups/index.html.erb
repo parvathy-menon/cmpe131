@@ -16,6 +16,7 @@
       <tr>
         <td><%= group.name %></td>
         <td><%= link_to 'Show', group.bulletin_board %></td>
+        <td><%= link_to 'Add User', add_group_url(group) %></td>
       </tr>
     <% end %>
   </tbody>

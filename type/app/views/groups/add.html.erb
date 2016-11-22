@@ -1,0 +1,14 @@
+<h1>INVITE</h1>
+<%= form_for @group, :url => { :action => "update" } do |f| %>
+    
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= text_field_tag(:email) %>
+
+  </div>
+    <%= hidden_field_tag ":group", @group %>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

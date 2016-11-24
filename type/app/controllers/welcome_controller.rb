@@ -1,7 +1,8 @@
 class WelcomeController < ApplicationController
   def index
      if user_signed_in?
-	redirect_to typeios_path
+	id = current_user.bulletin_board_id
+	redirect_to bulletin_board_path(id)
     end
   end
 end

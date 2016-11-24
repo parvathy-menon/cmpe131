@@ -1,11 +1,7 @@
 <p id="notice"><%= notice %></p>
-<%= link_to "List Bulletin Boards | ", bulletin_boards_url %>
-<%= link_to "View Groups | ", groups_url %>
-<%= link_to "Group Settings ", root_path %>
-
 <div id="typeio-header">
   <div class="typeio-button-new"><%= link_to 'New Typeio', new_typeio_path %></div>
-  <h1>Group Name</h1>
+  <h1>Personal Board</h1>
   <div><h5><%= link_to 'Log Out',  destroy_user_session_path %></h5></div>
 </div>
   <div id="typeio-list">
@@ -14,7 +10,7 @@
         <div class="typeio-date"><p><i>On <%= friendly_date(typeio.created_at) %></p></i></div>
         <div class="typeio-body"><p><%= typeio.body %></p></div>
         <div id="typeio-button-container">
-          <div class="typeio-button"><p><%= link_to 'Show', typeio %></p></div>
+          <!-- <div class="typeio-button"><p><%= link_to 'Show', typeio %></p></div> -->
           <div class="typeio-button"><p><%= link_to 'Edit', edit_typeio_path(typeio) %></p></div>
           <div class="typeio-delete-button"><p><%= link_to 'Destroy', typeio, method: :delete, data: { confirm: 'Are you sure?' } %></p></div>
         </div>
@@ -23,8 +19,6 @@
   </div>
 
 </div>
-
-
 
 <br>
 <br>

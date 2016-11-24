@@ -5,11 +5,13 @@ class BulletinBoardsController < ApplicationController
   # GET /bulletin_boards.json
   def index
     @bulletin_boards = BulletinBoard.all
+    
   end
 
   # GET /bulletin_boards/1
   # GET /bulletin_boards/1.json
   def show
+    @typeios = @bulletin_board.typeio
   end
 
   # GET /bulletin_boards/new
@@ -66,7 +68,7 @@ class BulletinBoardsController < ApplicationController
     def set_bulletin_board
       @bulletin_board = BulletinBoard.find(params[:id])
     end
-
+   
     # Never trust parameters from the scary internet, only allow the white list through.
     def bulletin_board_params
       params.require(:bulletin_board).permit(:num_posts)

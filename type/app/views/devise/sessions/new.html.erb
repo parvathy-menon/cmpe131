@@ -1,7 +1,4 @@
-<div id="header">
-  <%= image_tag 'logo-full-blue-large.png', id:'header-logo' %>
-  <h1>Log in</h1>
-</div>
+<%= render 'header' %>
 
 <div id="login-container">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>

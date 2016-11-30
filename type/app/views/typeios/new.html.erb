@@ -1,8 +1,6 @@
-<h1>New Typeio</h1>
+<%= render 'header' %>
 
-<%= render 'form' %>
-
-<%= hidden_field_tag 'bulletin_board_id', params[:bulletin_board_id] %>
-
-
-<%= link_to 'Back', typeios_path %>
+<div id="new-typeio-container">
+  <%= render 'form' %>
+  <%= hidden_field_tag 'bulletin_board_id', params[:bulletin_board_id] %>
+</div>

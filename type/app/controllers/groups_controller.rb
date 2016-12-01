@@ -34,7 +34,7 @@ class GroupsController < ApplicationController
 
     respond_to do |format|
       if @group.save
-        format.html { redirect_to @group, notice: 'Group was successfully created.' }
+        format.html { redirect_to @group.bulletin_board, notice: 'Group was successfully created.' }
         format.json { render :show, status: :created, location: @group }
       else
         format.html { render :new }
@@ -57,7 +57,7 @@ class GroupsController < ApplicationController
 	    format.html { redirect_to groups_path, notice: 'User was successfully added to the group.' }
             format.json { render :index, status: :ok, location: @group }
  	  else
-            format.html { redirect_to groups_path,  notice: 'USER DOES NOT EXIST -- CHANGE COLOR?' }
+            format.html { redirect_to groups_path,  alert: 'USER DOES NOT EXIST!' }
             format.json { render :index, status: :unprocessable_entity, location: @group }
           end
        end

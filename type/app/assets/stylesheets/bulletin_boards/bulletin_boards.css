@@ -22,6 +22,9 @@
   margin-bottom:-36px;
   float:left;
 }
+.notice-r{
+  color:red;
+}
 
 .typeio-cell{
   background-color: #111111;

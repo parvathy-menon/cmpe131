@@ -18,6 +18,7 @@ class BulletinBoardsController < ApplicationController
        @typeios = @bulletin_board.typeio
     else
       redirect_to current_user.bulletin_board
+      flash[:notice] = "You do not have access to that bulletin board"
     end
   end
 

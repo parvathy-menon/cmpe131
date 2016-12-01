@@ -1,5 +1,5 @@
 class TypeiosController < ApplicationController
-  before_action :set_typeio, only: [:show, :edit, :update, :destroy, :like, :dislike]
+  before_action :set_typeio, only: [:show, :edit, :update, :destroy]
   before_action :set_bulletin_board, only: [:create]
 
   # GET /typeios

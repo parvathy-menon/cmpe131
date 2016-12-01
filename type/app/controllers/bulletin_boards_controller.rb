@@ -11,7 +11,12 @@ class BulletinBoardsController < ApplicationController
   # GET /bulletin_boards/1
   # GET /bulletin_boards/1.json
   def show
-    @typeios = @bulletin_board.typeio
+    @bids = current_user.groups.collect(&:bulletin_board_id)
+    if current_user.bulletin_board == @bulletin_board || @bids.grep(@bulletin_board.id).any?
+       @typeios = @bulletin_board.typeio
+    else
+      redirect_to current_user.bulletin_board
+    end
   end
 
   # GET /bulletin_boards/new

@@ -8,8 +8,13 @@
         <div class="typeio-likes"><p><%= typeio.likes %></p></div>
         <div id="typeio-button-container">
           <div class="typeio-button"><p><%= link_to 'Show', typeio %></p></div>
-          <div class="typeio-button"><p><%= link_to 'Edit', edit_typeio_path(typeio) %></p></div>
-          <div class="typeio-delete-button"><p><%= link_to 'Destroy', typeio, method: :delete, data: { confirm: 'Are you sure?' } %></p></div>
+          
+          <!-- ONLY ALLOW A USER TO EDIT/DESTROY IF THE POST IS THEIRS! -->
+          <%if typeio.user == current_user%>
+              <div class="typeio-button"><p><%= link_to 'Edit', edit_typeio_path(typeio) %></p></div>
+              <div class="typeio-delete-button"><p><%= link_to 'Destroy', typeio, method: :delete, data: { confirm: 'Are you sure?' } %></p></div>
+          <%end%>
+          
         </div>
       </div>
     <% end %>

@@ -15,17 +15,19 @@
   <% @typeios.each do |typeio| %>
     <div class="typeio-cell">
       <div class="typeio-date"><p><i>On <%= friendly_date(typeio.created_at) %></p></i></div>
-      <div class="typeio-subject"><p><%= typeio.subject %></p></div>
-      <div class="typeio-body"><p><%= typeio.body %></p></div>
-      <div class="typeio-likes"><p><%= typeio.get_likes.size - typeio.get_dislikes.size %></p></div>
+      <div class="typeio-subject"><p>subject: <%= typeio.subject %></p></div>
+      <div class="typeio-body"><p>body: <%= typeio.body %></p></div>
+      <div class="typeio-likes"><p>likes: <%= typeio.get_likes.size - typeio.get_dislikes.size %></p></div>
       <div id="typeio-button-container">
-       <!-- <div class="typeio-button"><p><%= link_to 'Show', typeio %></p></div> -->
         <div class="typeio-button"><p><%= button_to 'Like', like_bulletin_board_typeio_path(:bulletin_board_id => typeio.bulletin_board, :id => typeio), method: :put %></p></div>
         <div class="typeio-button"><p><%= button_to 'Dislike', dislike_bulletin_board_typeio_path(:bulletin_board_id => typeio.bulletin_board, :id => typeio), method: :put %></p></div>
-        <div class="typeio-button"><p><%= link_to 'Edit', edit_typeio_path(typeio) %></p></div>
-        <div class="typeio-button"><p><%= link_to 'Comments', typeio_comments_path(typeio)%></p></div>
-        <div class="typeio-delete-button"><p><%= link_to 'Destroy', typeio, method: :delete, data: { confirm: 'Are you sure?' } %></p></div>
+        <div class="typeio-button"><p><%= link_to 'Comments:',typeio_comments_path(typeio)%><%=link_to typeio.comment.count,typeio_comments_path(typeio)%></p></div>
 
+        <!-- ONLY ALLOW A USER TO EDIT/DESTROY IF THE POST IS THEIRS! -->
+          <%if typeio.user == current_user%>
+              <div class="typeio-button"><p><%= link_to 'Edit', edit_typeio_path(typeio) %></p></div>
+              <div class="typeio-delete-button"><p><%= link_to 'Delete', typeio, method: :delete, data: { confirm: 'Are you sure?' } %></p></div>
+          <%end%>
       </div>
     </div>
   <% end %>

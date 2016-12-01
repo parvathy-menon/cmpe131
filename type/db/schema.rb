@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161201181421) do
+ActiveRecord::Schema.define(version: 20161201212456) do
 
   create_table "bulletin_boards", force: :cascade do |t|
     t.integer  "num_posts"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20161201181421) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.integer  "likes"
     t.string   "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -56,7 +55,6 @@ ActiveRecord::Schema.define(version: 20161201181421) do
     t.integer  "user_id"
     t.integer  "bulletin_board_id"
     t.string   "subject"
-    t.integer  "likes",              default: 0
     t.integer  "cached_votes_total", default: 0
     t.integer  "cached_votes_score", default: 0
     t.integer  "cached_votes_up",    default: 0

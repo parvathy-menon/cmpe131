@@ -1,5 +1,5 @@
 class BulletinBoardsController < ApplicationController
-  before_action :set_bulletin_board, only: [:show, :edit, :update, :destroy]
+  before_action :set_bulletin_board, only: [:show,:showByLikes, :edit, :update, :destroy]
 
   # GET /bulletin_boards
   # GET /bulletin_boards.json
@@ -12,6 +12,7 @@ class BulletinBoardsController < ApplicationController
   # GET /bulletin_boards/1
   # GET /bulletin_boards/1.json
 
+
   def show
     @bids = current_user.groups.collect(&:bulletin_board_id)
     if current_user.bulletin_board == @bulletin_board || @bids.grep(@bulletin_board.id).any?
@@ -21,6 +22,11 @@ class BulletinBoardsController < ApplicationController
       flash[:notice] = "You do not have access to that bulletin board"
     end
   end
+  
+  def showByLikes
+    @typeios = @bulletin_board.typeio
+    render :showByLikes
+  end 
 
   # GET /bulletin_boards/new
   def new

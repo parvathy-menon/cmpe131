@@ -18,7 +18,11 @@ Rails.application.routes.draw do
     end
   end
   end
-  resources :bulletin_boards
+  resources :bulletin_boards do
+    member do
+      get :showByLikes
+    end
+  end
   resources :groups
   devise_for :users, :controllers => { registrations: 'registrations' }
 

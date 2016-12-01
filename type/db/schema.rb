@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161201041133) do
+ActiveRecord::Schema.define(version: 20161201181421) do
 
   create_table "bulletin_boards", force: :cascade do |t|
     t.integer  "num_posts"
@@ -51,15 +51,23 @@ ActiveRecord::Schema.define(version: 20161201041133) do
 
   create_table "typeios", force: :cascade do |t|
     t.text     "body"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.integer  "user_id"
     t.integer  "bulletin_board_id"
     t.string   "subject"
-    t.integer  "likes",             default: 0
+    t.integer  "likes",              default: 0
+    t.integer  "cached_votes_total", default: 0
+    t.integer  "cached_votes_score", default: 0
+    t.integer  "cached_votes_up",    default: 0
+    t.integer  "cached_votes_down",  default: 0
   end
 
   add_index "typeios", ["bulletin_board_id"], name: "index_typeios_on_bulletin_board_id"
+  add_index "typeios", ["cached_votes_down"], name: "index_typeios_on_cached_votes_down"
+  add_index "typeios", ["cached_votes_score"], name: "index_typeios_on_cached_votes_score"
+  add_index "typeios", ["cached_votes_total"], name: "index_typeios_on_cached_votes_total"
+  add_index "typeios", ["cached_votes_up"], name: "index_typeios_on_cached_votes_up"
   add_index "typeios", ["user_id"], name: "index_typeios_on_user_id"
 
   create_table "users", force: :cascade do |t|

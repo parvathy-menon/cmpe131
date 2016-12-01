@@ -25,6 +25,14 @@
   font-size: 24px;
   background-color: #0f0f0f;
   border:none;
+  padding:3px;
+  color:#68c5db;
+  cursor: pointer;
+}
+
+#register-container em
+{
+  color:#999999;
 }
 
 #remember-me-container input

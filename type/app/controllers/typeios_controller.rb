@@ -76,6 +76,16 @@ class TypeiosController < ApplicationController
     redirect_to @typeio.bulletin_board
   end
 
+  def pin
+    @typeio = Typeio.find(params[:id])
+    if @typeio.ispriority == false
+      @typeio.update_attribute(:ispriority, true)
+    else
+      @typeio.update_attribute(:ispriority, false)
+    end
+    redirect_to @typeio.bulletin_board
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_typeio

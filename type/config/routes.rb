@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     member do
       put "like", to: "typeios#like"
       put "dislike", to: "typeios#dislike"
+      patch "pin", to: "typeios#pin"
     end
   end
   end

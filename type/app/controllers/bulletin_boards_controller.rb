@@ -8,8 +8,10 @@ class BulletinBoardsController < ApplicationController
     
   end
 
+
   # GET /bulletin_boards/1
   # GET /bulletin_boards/1.json
+
   def show
     @bids = current_user.groups.collect(&:bulletin_board_id)
     if current_user.bulletin_board == @bulletin_board || @bids.grep(@bulletin_board.id).any?
@@ -72,7 +74,7 @@ class BulletinBoardsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_bulletin_board
-      @bulletin_board = BulletinBoard.find(params[:id])
+          @bulletin_board = BulletinBoard.find(params[:id])	  
     end
    
     # Never trust parameters from the scary internet, only allow the white list through.

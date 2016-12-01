@@ -15,9 +15,9 @@
   <% @typeios.each do |typeio| %>
     <div class="typeio-cell">
       <div class="typeio-date"><p><i>On <%= friendly_date(typeio.created_at) %></p></i></div>
-      <div class="typeio-subject"><p><%= typeio.subject %></p></div>
-      <div class="typeio-body"><p><%= typeio.body %></p></div>
-      <div class="typeio-likes"><p><%= typeio.get_likes.size - typeio.get_dislikes.size %></p></div>
+      <div class="typeio-subject"><p>subject: <%= typeio.subject %></p></div>
+      <div class="typeio-body"><p>body: <%= typeio.body %></p></div>
+      <div class="typeio-likes"><p>likes: <%= typeio.get_likes.size - typeio.get_dislikes.size %></p></div>
       <div id="typeio-button-container">
         <div class="typeio-button"><p><%= button_to 'Like', like_bulletin_board_typeio_path(:bulletin_board_id => typeio.bulletin_board, :id => typeio), method: :put %></p></div>
         <div class="typeio-button"><p><%= button_to 'Dislike', dislike_bulletin_board_typeio_path(:bulletin_board_id => typeio.bulletin_board, :id => typeio), method: :put %></p></div>

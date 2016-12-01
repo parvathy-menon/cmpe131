@@ -1,23 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Comments</h1>
-
 <table>
   <thead>
     <tr>
-      <th>Likes</th>
       <th>Body</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @comments.each do |comment| %>
+    <h3><%= @typeio.subject %></h3>
+    <h1><%= @typeio.body %></h1>
+
+   <% @comments.each do |comment| %>
       <tr>
-        <td><%= comment.likes %></td>
         <td><%= comment.body %></td>
+
+        <!-- ONLY ALLOW EDIT/DESTROY IF COMMENT BELONGS TO CURRENT USER!-->
+        <%if comment.user == current_user%>
         <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-        <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

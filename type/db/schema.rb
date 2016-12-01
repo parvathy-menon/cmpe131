@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161201032715) do
+ActiveRecord::Schema.define(version: 20161201034857) do
 
   create_table "bulletin_boards", force: :cascade do |t|
     t.integer  "num_posts"
@@ -50,12 +50,12 @@ ActiveRecord::Schema.define(version: 20161201032715) do
 
   create_table "typeios", force: :cascade do |t|
     t.text     "body"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
     t.integer  "user_id"
     t.integer  "bulletin_board_id"
     t.string   "subject"
-    t.integer  "likes"
+    t.integer  "likes",             default: 0
   end
 
   add_index "typeios", ["bulletin_board_id"], name: "index_typeios_on_bulletin_board_id"

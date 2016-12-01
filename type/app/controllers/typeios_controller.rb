@@ -74,6 +74,6 @@ class TypeiosController < ApplicationController
     end 
     # Never trust parameters from the scary internet, only allow the white list through.
     def typeio_params
-      params.require(:typeio).permit(:body)
+      params.require(:typeio).permit(:body,:subject)
     end
 end

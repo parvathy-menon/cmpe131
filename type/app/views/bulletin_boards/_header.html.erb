@@ -1,0 +1,17 @@
+<div id="header-container">
+  <div id="header">
+    <div id="bulletin-board-left-menu">
+      <%= image_tag 'menu-glyph.png', id:"menu-button"%>
+      <div class="typeio-button-new"><%= image_tag 'dialogue-box-pencil-glyph.png'%><%= link_to 'New Typeio', new_bulletin_board_typeio_path(@bulletin_board) %></div>
+    </div>
+    <div id="title-container">
+      <h1>BOARD NAME</h1> <!--Placeholder, replace with erb code that renders the proper board name-->
+    </div>
+    <div id="bulletin-board-right-menu">
+      <%= link_to "Groups |", groups_path %>
+      <%= link_to " User Settings |", groups_url %>
+      <%= link_to " Personal Board |", root_path%>
+      <%= link_to 'Log Out',  destroy_user_session_path %>
+    </div>
+  </div>
+</div>

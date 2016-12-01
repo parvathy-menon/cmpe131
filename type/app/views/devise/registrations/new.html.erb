@@ -1,7 +1,4 @@
-<div id="header">
-  <%= image_tag 'logo-full-blue-large.png', id:'header-logo' %>
-  <h1>Sign Up</h1>
-</div>
+<%= render 'header' %>
 
 <div id="register-container">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -35,7 +32,7 @@
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
     </div>
 
-    <div class="actions", id="signup-button">
+    <div class="actions" id="signup-button">
       <%= f.submit "Sign up" %>
     </div>
   <% end %>

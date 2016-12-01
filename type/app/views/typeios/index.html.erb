@@ -1,12 +1,4 @@
-<div id="header">
-  <%= image_tag 'menu-glyph.png', id:"menu-button"%>
-  <div class="typeio-button-new"><%= image_tag 'dialogue-box-pencil-glyph.png'%><%= link_to 'New', new_typeio_path %></div>
-  <h1>Personal Board</h1>
-  <div id="username-container">
-
-  </div>
-  <div style="float:right;"><h5><%= link_to 'Log Out',  destroy_user_session_path %></h5></div>
-</div>
+<%= render 'header' %>
   <div id="typeio-list">
     <% @typeios.each do |typeio| %>
       <div class="typeio-cell">

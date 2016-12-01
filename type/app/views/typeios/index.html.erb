@@ -4,6 +4,8 @@
       <div class="typeio-cell">
         <div class="typeio-date"><p><i>On <%= friendly_date(typeio.created_at) %></p></i></div>
         <div class="typeio-body"><p><%= typeio.body %></p></div>
+        <div class="typeio-subject"><p><%= typeio.subject %></p></div>
+        <div class="typeio-likes"><p><%= typeio.likes %></p></div>
         <div id="typeio-button-container">
           <div class="typeio-button"><p><%= link_to 'Show', typeio %></p></div>
           <div class="typeio-button"><p><%= link_to 'Edit', edit_typeio_path(typeio) %></p></div>

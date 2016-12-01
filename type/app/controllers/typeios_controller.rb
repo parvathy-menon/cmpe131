@@ -1,5 +1,5 @@
 class TypeiosController < ApplicationController
-  before_action :set_typeio, only: [:show, :edit, :update, :destroy]
+  before_action :set_typeio, only: [:show, :edit, :update, :destroy, :like, :dislike]
   before_action :set_bulletin_board, only: [:create]
 
   # GET /typeios
@@ -62,6 +62,18 @@ class TypeiosController < ApplicationController
       format.html { redirect_to typeios_url, notice: 'Typeio was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def like
+    @typeio = Typeio.find(params[:id])
+    @typeio.liked_by current_user
+    redirect_to @typeio.bulletin_board
+  end
+
+  def dislike
+    @typeio = Typeio.find(params[:id])
+    @typeio.disliked_by current_user
+    redirect_to @typeio.bulletin_board
   end
 
   private

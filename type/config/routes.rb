@@ -11,7 +11,12 @@ Rails.application.routes.draw do
 	resources :comments
   end
   resources :bulletin_boards do
-	resources :typeios
+	resources :typeios do
+    member do
+      put "like", to: "typeios#like"
+      put "dislike", to: "typeios#dislike"
+    end
+  end
   end
   resources :bulletin_boards
   resources :groups

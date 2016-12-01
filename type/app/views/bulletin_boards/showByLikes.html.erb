@@ -6,13 +6,13 @@
 <% end %>
 
 <div id="sorter">
-  <div class="sort-likes"><p><%= button_to 'sort by likes', showByLikes_bulletin_board_path(@bulletin_board), method: :get%> </p></div>
+  <div class="sort-likes"><p><%= button_to 'sort by likes', showByLikes_bulletin_board_path(@bulletin_board), method: :get%> 
   <div class="sort-date"><p><%= button_to 'sort by date', bulletin_board_path(@bulletin_board), method: :get%> </p></div>
-
+</p></div>
 </div>
 
 <div id="typeio-list">
-  <% @typeios.each do |typeio| %>
+  <% @typeios.order(:cached_votes_down).each do |typeio| %>
     <div class="typeio-cell">
       <div class="typeio-date"><p><i>On <%= friendly_date(typeio.created_at) %></p></i></div>
       <div class="typeio-subject"><p><%= typeio.subject %></p></div>

@@ -3,4 +3,4 @@ class RemoveLikesFromCommentsTypeios < ActiveRecord::Migration
   	remove_column :comments, :likes
   	remove_column :typeios, :likes
   end
-endr
+end

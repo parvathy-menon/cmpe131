@@ -1,6 +1,6 @@
 class TypeiosController < ApplicationController
   before_action :set_typeio, only: [:show, :edit, :update, :destroy]
-  before_action :set_bulletin_board, only: [:create, :destroy, :index]
+  before_action :set_bulletin_board, only: [:create, :destroy, :index, :new, :update]
 
   # GET /typeios
   # GET /typeios.json
@@ -45,7 +45,7 @@ class TypeiosController < ApplicationController
   def update
     respond_to do |format|
       if @typeio.update(typeio_params)
-        format.html { redirect_to @typeio, notice: 'Typeio was successfully updated.' }
+        format.html { redirect_to @bulletin_board, notice: 'Typeio was successfully updated.' }
         format.json { render :show, status: :ok, location: @typeio }
       else
         format.html { render :edit }

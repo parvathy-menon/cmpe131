@@ -78,7 +78,8 @@ class BulletinBoardsController < ApplicationController
   # DELETE /bulletin_boards/1
   # DELETE /bulletin_boards/1.json
   def destroy
-    @bulletin_board.destroy
+    @t = @bulletin_board.typeio.find(params[:typeio_id])
+    @t.destroy
     respond_to do |format|
       format.html { redirect_to bulletin_boards_url, notice: 'Bulletin board was successfully destroyed.' }
       format.json { head :no_content }

@@ -1,6 +1,6 @@
 class TypeiosController < ApplicationController
   before_action :set_typeio, only: [:show, :edit, :update, :destroy]
-  before_action :set_bulletin_board, only: [:create]
+  before_action :set_bulletin_board, only: [:create, :destroy, :index]
 
   # GET /typeios
   # GET /typeios.json
@@ -57,9 +57,13 @@ class TypeiosController < ApplicationController
   # DELETE /typeios/1
   # DELETE /typeios/1.json
   def destroy
+    #@t = @bulletin_board.typeio.find(params[:typeio_id])
+   #@t = @bulletin_board.typeio
+    #@t.destroy
     @typeio.destroy
+    #@bulletin_board.typeio.destroy
     respond_to do |format|
-      format.html { redirect_to typeios_url, notice: 'Typeio was successfully destroyed.' }
+      format.html { redirect_to @bulletin_board, notice: 'Typeio was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

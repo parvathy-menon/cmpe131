@@ -4,18 +4,12 @@
     <div class="notice-r"><%= flash[:notice] %></div>
 <% end %>
 
-<<<<<<< HEAD
 <div id="sort-container">
   <div id="sort-likes-button"><%= button_to 'sort by likes', showByLikes_bulletin_board_path(@bulletin_board), method: :get%></div>
   <div id="sort-date-button"><%= button_to 'sort by date', bulletin_board_path(@bulletin_board), method: :get%></div>
 </div>
-=======
-<div id="sorter">
-  <div class="sort-likes"><p><%= button_to 'sort by likes', showByLikes_bulletin_board_path(@bulletin_board), method: :get%></p></div>
-  <div class="sort-date"><p><%= button_to 'sort by date', bulletin_board_path(@bulletin_board), method: :get%> </p></div>
-</div>
 
-<!-- RENDER PINNED POSTS FIRST ALWAYS--> 
+<!-- RENDER PINNED POSTS FIRST ALWAYS-->
 <div id="typeio-list">
   <% @ptypeios.each do |typeio| %>
     <%if typeio.ispriority == true %>
@@ -46,7 +40,6 @@
 </div>
 
 <!-- RENDER THE REST OF THE POSTS...-->
->>>>>>> c4ee5c39059b2c0e875973f968137d9c616e2ff8
 <div id="typeio-list">
   <% @typeios.each do |typeio| %>
     <%if typeio.ispriority == false %>
@@ -67,13 +60,8 @@
         <!-- ONLY ALLOW A USER TO EDIT/DESTROY IF THE POST IS THEIRS! -->
         <div id="typeio-user-buttons">
           <%if typeio.user == current_user%>
-<<<<<<< HEAD
               <%= link_to image_tag('icons/edit.svg', id:"edit-button", class:"typeio-button svg"), edit_typeio_path(typeio) %>
               <%= link_to image_tag('icons/garbage.svg', id:"delete-button", class:"typeio-button svg"), typeio, method: :delete, data: { confirm: 'Are you sure?' } %>
-=======
-              <div class="typeio-button"><p><%= link_to 'Edit', edit_bulletin_board_typeio_path(@bulletin_board,typeio) %></p></div>
-              <div class="typeio-delete-button"><p><%= link_to 'Delete', bulletin_board_typeio_url(@bulletin_board,typeio) , method: :delete, data: { confirm: 'Are you sure?' } %></p></div>
->>>>>>> c4ee5c39059b2c0e875973f968137d9c616e2ff8
           <%end%>
         </div>
       </div>

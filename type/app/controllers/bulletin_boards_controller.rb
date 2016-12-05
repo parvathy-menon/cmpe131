@@ -14,9 +14,15 @@ class BulletinBoardsController < ApplicationController
 
 
   def show
-    @bids = current_user.groups.collect(&:bulletin_board_id)
+    #grabs all the current user's groups' bulletin_boards
+    @bids = current_user.groups.collect(&:bulletin_board_id) 
+
+    #only display the boards that the user should have access to
     if current_user.bulletin_board == @bulletin_board || @bids.grep(@bulletin_board.id).any?
-       @typeios = @bulletin_board.typeio
+       @ptypeios = @bulletin_board.typeio #used to extract pinned posts
+       @typeios = @bulletin_board.typeio #used for all regular posts
+
+    #otherwise take user to their personal bulletin board!
     else
       redirect_to current_user.bulletin_board
       flash[:notice] = "You do not have access to that bulletin board"
@@ -24,7 +30,9 @@ class BulletinBoardsController < ApplicationController
   end
   
   def showByLikes
-    @typeios = @bulletin_board.typeio
+    @ptypeios = @bulletin_board.typeio #used to extract pinned posts
+    @typeios = @bulletin_board.typeio #used to extract regular posts
+
     render :showByLikes
   end 
 
@@ -70,7 +78,8 @@ class BulletinBoardsController < ApplicationController
   # DELETE /bulletin_boards/1
   # DELETE /bulletin_boards/1.json
   def destroy
-    @bulletin_board.destroy
+    @t = @bulletin_board.typeio.find(params[:typeio_id])
+    @t.destroy
     respond_to do |format|
       format.html { redirect_to bulletin_boards_url, notice: 'Bulletin board was successfully destroyed.' }
       format.json { head :no_content }

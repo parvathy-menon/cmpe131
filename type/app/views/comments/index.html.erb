@@ -1,3 +1,4 @@
+<%= render 'header' %>
 <p id="notice"><%= notice %></p>
 
 <table>
@@ -18,7 +19,7 @@
 
         <!-- ONLY ALLOW EDIT/DESTROY IF COMMENT BELONGS TO CURRENT USER!-->
         <%if comment.user == current_user%>
-        <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
+        <td><%= link_to 'Edit', edit_typeio_comment_path(comment,@typeio) %></td>
         <td><%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
       </tr>

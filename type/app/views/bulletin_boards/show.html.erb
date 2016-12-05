@@ -4,9 +4,9 @@
     <div class="notice-r"><%= flash[:notice] %></div>
 <% end %>
 
-<div id="sorter">
-  <div class="sort-likes"><p><%= button_to 'sort by likes', showByLikes_bulletin_board_path(@bulletin_board), method: :get%> </p></div>
-  <div class="sort-date"><p><%= button_to 'sort by date', bulletin_board_path(@bulletin_board), method: :get%> </p></div>
+<div id="sort-container">
+  <div id="sort-likes-button"><%= button_to 'sort by likes', showByLikes_bulletin_board_path(@bulletin_board), method: :get%></div>
+  <div id="sort-date-button"><%= button_to 'sort by date', bulletin_board_path(@bulletin_board), method: :get%></div>
 </div>
 <div id="typeio-list">
   <% @typeios.each do |typeio| %>

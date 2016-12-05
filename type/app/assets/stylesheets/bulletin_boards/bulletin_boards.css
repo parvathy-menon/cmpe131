@@ -150,3 +150,32 @@
 {
   height:30px;
 }
+
+#sort-container
+{
+  float:left;
+  width:100%;
+  margin-top:10px;
+  margin-left:10px;
+}
+
+#sort-likes-button, #sort-date-button
+{
+  float:left;
+  margin-right:10px;
+}
+
+#sort-likes-button input, #sort-date-button input
+{
+  width:150px;
+  height:35px;
+  font-size: 24px;
+  background-color: #0f0f0f;
+  border:none;
+  padding:3px;
+  padding-bottom: 5px;
+  color:#68c5db;
+  cursor: pointer;
+  float:right;
+  border-radius: 5px;
+}

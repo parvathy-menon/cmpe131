@@ -57,7 +57,7 @@
 
         <!-- ONLY ALLOW A USER TO EDIT/DESTROY IF THE POST IS THEIRS! -->
           <%if typeio.user == current_user%>
-              <div class="typeio-button"><p><%= link_to 'Edit', edit_typeio_path(typeio) %></p></div>
+              <div class="typeio-button"><p><%= link_to 'Edit', edit_bulletin_board_typeio_path(@bulletin_board,typeio) %></p></div>
               <div class="typeio-delete-button"><p><%= link_to 'Delete', bulletin_board_typeio_url(@bulletin_board,typeio) , method: :delete, data: { confirm: 'Are you sure?' } %></p></div>
           <%end%>
       </div>

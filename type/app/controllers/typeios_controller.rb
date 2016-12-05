@@ -1,6 +1,6 @@
 class TypeiosController < ApplicationController
   before_action :set_typeio, only: [:show, :edit, :update, :destroy]
-  before_action :set_bulletin_board, only: [:create, :destroy, :index, :new, :update]
+  before_action :set_bulletin_board, only: [:create, :destroy, :index, :new, :update, :edit]
 
   # GET /typeios
   # GET /typeios.json

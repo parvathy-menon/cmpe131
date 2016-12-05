@@ -57,11 +57,7 @@ class TypeiosController < ApplicationController
   # DELETE /typeios/1
   # DELETE /typeios/1.json
   def destroy
-    #@t = @bulletin_board.typeio.find(params[:typeio_id])
-   #@t = @bulletin_board.typeio
-    #@t.destroy
     @typeio.destroy
-    #@bulletin_board.typeio.destroy
     respond_to do |format|
       format.html { redirect_to @bulletin_board, notice: 'Typeio was successfully destroyed.' }
       format.json { head :no_content }

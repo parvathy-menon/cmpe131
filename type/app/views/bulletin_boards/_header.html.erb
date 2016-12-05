@@ -1,23 +1,25 @@
 <div id="header-container">
   <div id="header">
     <div id="bulletin-board-left-menu">
-      <%= image_tag 'menu-glyph.png', id:"menu-button"%>
-      <div class="typeio-button-new"><%= image_tag 'dialogue-box-pencil-glyph.png'%><%= link_to 'New Typeio', new_bulletin_board_typeio_path(@bulletin_board) %></div>
-
+      <div style="height:42px; float:left;" onclick="showSidebarMenu()">
+        <%= image_tag 'icons/menu-1.svg', id:"menu-button", class:"svg", href:"javascript:void(0);", onclick:"showSidebarMenu()"%>
+      </div>
+      <%= link_to image_tag('icons/speech-bubble-4.svg', id:"header-typeio-button-new", class:"svg"), new_bulletin_board_typeio_path(@bulletin_board)%>
     </div>
     <div id="title-container">
-      <% if current_user.bulletin_board == @bulletin_board %> <!-- DISPLAY CORRECT BOARD NAME-->
+      <% if current_user.bulletin_board == @bulletin_board %> <!-- DISPLAY CORRECT BOARD NAME s-->
       <h1><%=current_user.first_name%>'s Board</h1>
       <% else %>
       <h1><%=@bulletin_board.group.name%>'s Board</h1>
       <%end%>
     </div>
     <div id="bulletin-board-right-menu">
-      <p>needs formatting -> Hello <%=current_user.first_name %> <%=current_user.last_name%></p>
-      <%= link_to "Groups |", groups_path %>
-      <%= link_to " User Settings |", groups_url %>
-      <%= link_to " Personal Board |", root_path%>
-      <%= link_to 'Log Out',  destroy_user_session_path %>
+      <div id="header-user-name">
+        <i><p>Hello <%=current_user.first_name %> <%=current_user.last_name%>!</p></i>
+      </div>
+      <div id="header-profile-image">
+        <%= image_tag 'icons/user-2.svg', class:"svg"%>
+      </div>
     </div>
   </div>
 </div>

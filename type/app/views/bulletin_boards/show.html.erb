@@ -35,8 +35,8 @@
         <!-- ONLY ALLOW A USER TO EDIT/DESTROY IF THE POST IS THEIRS! -->
         <div id="typeio-user-buttons">
           <%if typeio.user == current_user%>
-            <%= link_to image_tag('icons/edit.svg', id:"edit-button", class:"typeio-button svg"), edit_typeio_path(typeio) %>
-            <%= link_to image_tag('icons/garbage.svg', id:"delete-button", class:"typeio-button svg"), typeio, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%= link_to image_tag('icons/edit.svg', id:"edit-button", class:"typeio-button svg"), edit_bulletin_board_typeio_path(@bulletin_board,typeio) %>
+            <%= link_to image_tag('icons/garbage.svg', id:"delete-button", class:"typeio-button svg"), bulletin_board_typeio_url(@bulletin_board,typeio), method: :delete, data: { confirm: 'Are you sure?' } %>
           <%end%>
         </div>
         <%end%><!-- END RENDER PINNED POSTS-->
@@ -66,8 +66,8 @@
         <!-- ONLY ALLOW A USER TO EDIT/DESTROY IF THE POST IS THEIRS! -->
         <div id="typeio-user-buttons">
           <%if typeio.user == current_user%>
-              <%= link_to image_tag('icons/edit.svg', id:"edit-button", class:"typeio-button svg"), edit_typeio_path(typeio) %>
-              <%= link_to image_tag('icons/garbage.svg', id:"delete-button", class:"typeio-button svg"), typeio, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <%= link_to image_tag('icons/edit.svg', id:"edit-button", class:"typeio-button svg"), edit_bulletin_board_typeio_path(@bulletin_board,typeio) %>
+              <%= link_to image_tag('icons/garbage.svg', id:"delete-button", class:"typeio-button svg"), bulletin_board_typeio_url(@bulletin_board,typeio), method: :delete, data: { confirm: 'Are you sure?' } %>
           <%end%>
         </div>
       </div>

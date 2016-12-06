@@ -14,7 +14,7 @@
 <div id="typeio-list">
   <% @ptypeios.each do |typeio| %>
     <%if typeio.ispriority == true %>
-    <div class="typeio-cell">
+    <div class="typeio-cell typeio-cell-pinned">
       <div id="typeio-pinned-badge-container"><p><i>pinned</i><p></div>
       <div class="typeio-date"><p><i>On <%= friendly_date(typeio.created_at) %></p></i></div>
       <div class="typeio-subject"><p><%= typeio.subject %></p></div>

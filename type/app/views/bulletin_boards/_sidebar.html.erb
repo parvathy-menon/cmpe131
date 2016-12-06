@@ -3,4 +3,14 @@
   <%= link_to "<li>User Settings</li>".html_safe, edit_user_registration_path %>
   <%= link_to "<li>Personal Board</li>".html_safe, root_path%>
   <%= link_to "<li>Log Out</li>".html_safe,  destroy_user_session_path %>
+  <!-- DISPLAY USERS THAT HAVE ACCESS TO CURRENT BOARD .. I.E. THEY ARE IN THIS GROUP-->
+  <% if current_user.bulletin_board != @bulletin_board %> <!-- CHECK IF THIS IS A PERSONAL BOARD -->
+    <h1>Group members: </h1>
+  	<% @bulletin_board.group.users.collect(&:first_name).each do |user| %> <!-- GRAB GROUP USER'S FIRST_NAME-->
+  		<li><%=user%></li>
+  	<%end%>
+  <% else %>
+  	<h1>Personal board for: </h1>						<!-- WE ARE ON A PERSONAL BOARD, LIST USER'S NAME -->
+  	<h1><li><%= current_user.first_name %></li></h1>
+  <%end%>
 </ul>

@@ -17,6 +17,6 @@
   <% end %>
   <div id="comment-button-container">
     <%= link_to 'New Comment', new_typeio_comment_path %>
-    <%= link_to 'Back to board', @typeio.bulletin_board %>
+    <%= link_to 'Back to board', @typeio.bulletin_board, method: :get%>
   </div>
 </div>

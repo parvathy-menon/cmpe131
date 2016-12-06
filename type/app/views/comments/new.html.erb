@@ -1,5 +1,28 @@
-<h1>New Comment</h1>
+<%= javascript_include_tag :defaults %>
+<%= csrf_meta_tag %>
 
-<%= render 'form' %>
+<div id="header-container">
+  <div id="header">
+    <div style="height:42px; float:left;" onclick="showSidebarMenu()">
+      <%= image_tag 'icons/menu-1.svg', id:"menu-button", class:"svg", href:"javascript:void(0);", onclick:"showSidebarMenu()"%>
+    </div>
+      <div id="title-container">
+        <h1>New Comment</h1>
+      </div>
+      <div id="bulletin-board-right-menu">
+        <div id="header-user-name">
+          <i><p>Hello <%=current_user.first_name %> <%=current_user.last_name%>!</p></i>
+        </div>
+        <div id="header-profile-image">
+          <%= image_tag 'icons/user-2.svg', class:"svg"%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= link_to 'Back', comments_path %>
+<%= render 'sidebar' %>
+<div id="new-comment-container">
+  <%= render 'form' %>
+  <%= link_to 'Back', comments_path %>
+</div>

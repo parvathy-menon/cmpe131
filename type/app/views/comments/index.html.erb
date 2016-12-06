@@ -1,33 +1,21 @@
 <%= render 'header' %>
+<%= render 'sidebar' %>
 <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div id="comments-container">
+  <% @comments.each do |comment| %>
+    <div class="comment-cell">
+      <p><%= comment.user.first_name %> <%= comment.user.last_name %></p>
+      <%= comment.body %>
 
-  <tbody>
-    <h3><%= @typeio.subject %></h3>
-    <h1><%= @typeio.body %></h1>
-
-   <% @comments.each do |comment| %>
-      <tr>
-        <td><%= comment.body %></td>
-
-        <!-- ONLY ALLOW EDIT/DESTROY IF COMMENT BELONGS TO CURRENT USER!-->
-        <%if comment.user == current_user%>
-        <td><%= link_to 'Edit', edit_typeio_comment_path(comment,@typeio) %></td>
-        <td><%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Comment', new_typeio_comment_path %>
-<%= link_to 'Back to board', @typeio.bulletin_board %>
+      <%if comment.user == current_user%>
+      <%= link_to 'Edit', edit_typeio_comment_path(comment,@typeio) %>
+      <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+    </div>
+  <% end %>
+  <div id="comment-button-container">
+    <%= link_to 'New Comment', new_typeio_comment_path %>
+    <%= link_to 'Back to board', @typeio.bulletin_board %>
+  </div>
+</div>

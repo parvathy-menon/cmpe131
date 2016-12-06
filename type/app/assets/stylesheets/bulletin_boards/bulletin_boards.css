@@ -8,14 +8,6 @@
 #typeio-list{
 }
 
-#bulletin-board-right-menu
-{
-  float:right;
-  margin-top:-10px;
-  margin-bottom:-10px;
-  margin-right: 25px;
-}
-
 #bulletin-board-left-menu
 {
   margin-left: 10px;
@@ -56,16 +48,6 @@
   line-height: 1em;
 }
 
-.typeio-button
-{
-  width:100px;
-  text-align: center;
-  background-color: #0197f6;
-  margin:5px;
-  border-radius: 5px;
-  float:left;
-}
-
 .typeio-delete-button
 {
   width:100px;
@@ -78,44 +60,24 @@
 
 #typeio-button-container
 {
-  margin-left: 9px;
   display: block;
   float: left;
+  width:100%;
 }
 
-.typeio-button p, .typeio-delete-button p, .typeio-button a, .typeio-delete-button a
+#header-typeio-button-new
 {
-  margin:5px;
-  padding:0px;
-  color: #000000;
-}
-
-.typeio-button-show
-{
-
-}
-
-.typeio-button-new
-{
-  background-color: #0197f6;
-  border-radius: 10px;
   float:left;
-  padding:8px;
-  padding-top:10px;
+  height:42px;
+  margin-right:15px;
   z-index: 1000;
   position: relative;
-}
-.typeio-button-new img
-{
-  float:left;
-  height:22px
+  cursor: pointer;
 }
 
-.typeio-button-new a
+#header-typeio-button-new path
 {
-  color:#FFFFFF;
-  font-size: 22px;
-  font-weight: bold;
+  fill:#0197f6;
 }
 
 #menu-button
@@ -125,4 +87,100 @@
   margin-right:15px;
   z-index: 1000;
   position: relative;
+  cursor: pointer;
+}
+
+#menu-button path
+{
+  fill:#0197f6;
+}
+
+#typeio-like-container
+{
+  background-color: #0197f6;
+  border-radius:5px;
+  min-width: 95px;
+  padding-left: 5px;
+  padding-right:5px;
+  padding-top: 5px;
+  float:left;
+}
+
+#like-button path, #dislike-button path
+{
+  fill: #FFFFFF;
+}
+
+#typeio-like-container p
+{
+  color:#FFFFFF;
+  float:left;
+  font-size:24px;
+  margin-right:10px;
+  margin-left:5px;
+  margin-top:3px;
+  margin-bottom: 0px;
+  padding:0px;
+}
+
+#typeio-info-button-container
+{
+  padding:5px;
+  float:left;
+}
+
+#typeio-user-buttons
+{
+  float:right;
+  padding:5px;
+  padding-right:0px;
+}
+
+#delete-button path
+{
+  fill: red;
+}
+
+.typeio-button path
+{
+  fill: #0197f6;
+}
+
+.typeio-button
+{
+  height:30px;
+}
+
+#sort-container
+{
+  float:left;
+  width:100%;
+  margin-top:10px;
+  margin-left:10px;
+}
+
+#sort-likes-button, #sort-date-button
+{
+  float:left;
+  margin-right:10px;
+}
+
+#sort-likes-button input, #sort-date-button input
+{
+  width:150px;
+  height:35px;
+  font-size: 24px;
+  background-color: #0f0f0f;
+  border:none;
+  padding:3px;
+  padding-bottom: 5px;
+  color:#68c5db;
+  cursor: pointer;
+  float:right;
+  border-radius: 5px;
+}
+
+#typeio-pinned-badge-container
+{
+  float:right;
 }

@@ -59,7 +59,7 @@ class TypeiosController < ApplicationController
   def destroy
     @typeio.destroy
     respond_to do |format|
-      format.html { redirect_to @bulletin_board, notice: 'Typeio was successfully destroyed.' }
+      format.html { redirect_to @typeio.bulletin_board, notice: 'Typeio was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.text_area :subject %>
-    <%= f.text_area :body %>                         
+    <%= f.text_field :subject, placeholder:"Subject" %>
+    <%= f.text_area :body, placeholder:"New Post..." %>
   </div>
   <div id="new-typeio-button-container">
     <div class="actions" id="typeio-publish-button">

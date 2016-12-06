@@ -3,21 +3,24 @@
 
 <div id="header-container">
   <div id="header">
-    <div id="bulletin-board-left-menu">
-      <%= image_tag 'menu-glyph.png', id:"menu-button"%>
+    <div style="height:42px; float:left;" onclick="showSidebarMenu()">
+      <%= image_tag 'icons/menu-1.svg', id:"menu-button", class:"svg", href:"javascript:void(0);", onclick:"showSidebarMenu()"%>
     </div>
-      <div id="title-container">
-      <% if current_user.bulletin_board == @typeio.bulletin_board %> <!-- DISPLAY CORRECT BOARD NAME-->
-      <h1><%=current_user.first_name%>'s Board</h1>
-      <% else %>
-      <h1><%=@typeio.bulletin_board.group.name%>'s Board</h1>
-      <%end%>
-    </div>
-    <div id="bulletin-board-right-menu">
-      <%= link_to "Groups |", groups_path %>
-      <%= link_to " User Settings |", edit_user_registration_path %>
-      <%= link_to " Personal Board |", root_path%>
-      <%= link_to 'Log Out',  destroy_user_session_path %>
+      <div id="title-container" style="margin-top:-35px;">
+        <% if current_user.bulletin_board == @typeio.bulletin_board %> <!-- DISPLAY CORRECT BOARD NAME-->
+        <h1><%=current_user.first_name%>'s Board</h1>
+        <% else %>
+        <h1><%=@typeio.bulletin_board.group.name%>'s Board</h1>
+        <%end%>
+      </div>
+      <div id="bulletin-board-right-menu">
+        <div id="header-user-name">
+          <i><p>Hello <%=current_user.first_name %> <%=current_user.last_name%>!</p></i>
+        </div>
+        <div id="header-profile-image">
+          <%= image_tag 'icons/user-2.svg', class:"svg"%>
+        </div>
+      </div>
     </div>
   </div>
 </div>

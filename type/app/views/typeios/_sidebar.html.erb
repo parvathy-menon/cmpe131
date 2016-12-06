@@ -1,0 +1,6 @@
+<ul id="sidebar-menu" style="left:-340px;"> <!--the style has to be there because javascript is garbage-->
+  <%= link_to "<li>Groups</li>".html_safe, groups_path %>
+  <%= link_to "<li>User Settings</li>".html_safe, edit_user_registration_path%>
+  <%= link_to "<li>Personal Board</li>".html_safe, root_path%>
+  <%= link_to "<li>Log Out</li>".html_safe,  destroy_user_session_path %>
+</ul>

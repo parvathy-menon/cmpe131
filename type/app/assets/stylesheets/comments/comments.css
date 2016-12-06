@@ -1,0 +1,59 @@
+#comments-container
+{
+  width: 600px;
+  margin-top:50px;
+  margin-left: auto;
+  margin-right:auto;
+  padding:10px;
+  background-color: #222222;
+}
+
+#comment-button-container
+{
+  margin-top:10px;
+}
+
+#new-comment-container
+{
+  width: 600px;
+  margin-top:50px;
+  margin-left: auto;
+  margin-right:auto;
+  padding:10px;
+  background-color: #222222;
+}
+
+#new-comment-container label
+{
+  font-size: 24px;
+}
+
+#new-comment-container .field
+{
+  margin-top: 10px;
+}
+
+#new-comment-container input
+{
+  width:595px;
+  height:30px;
+  font-size: 24px;
+  background-color: #0f0f0f;
+  border:none;
+  padding:3px;
+  color:#68c5db;
+  cursor: pointer;
+}
+
+#new-comment-container em
+{
+  color:#999999;
+}
+
+#comment-create-button input
+{
+  width:200px;
+  display:block;
+  margin:auto;
+  margin-top:10px;
+}

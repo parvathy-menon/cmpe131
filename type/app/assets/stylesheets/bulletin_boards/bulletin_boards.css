@@ -179,3 +179,8 @@
   float:right;
   border-radius: 5px;
 }
+
+#typeio-pinned-badge-container
+{
+  float:right;
+}

@@ -14,25 +14,31 @@
   <% @ptypeios.each do |typeio| %>
     <%if typeio.ispriority == true %>
     <div class="typeio-cell">
+      <div id="typeio-pinned-badge-container"><p><i>pinned</i><p></div>
       <div class="typeio-date"><p><i>On <%= friendly_date(typeio.created_at) %></p></i></div>
-      <div class="typeio-subject"><p>subject: <%= typeio.subject %></p></div>
-      <div class="typeio-body"><p>body: <%= typeio.body %></p></div>
-      <div class="typeio-likes"><p>likes: <%= typeio.get_likes.size - typeio.get_dislikes.size %></p></div>
+      <div class="typeio-subject"><p><%= typeio.subject %></p></div>
+      <div class="typeio-body"><p><%= typeio.body %></p></div>
+      <div id="typeio-button-container">
+        <div id="typeio-like-container">
+          <p><%= typeio.get_likes.size - typeio.get_dislikes.size %></p>
+          <%= link_to image_tag('icons/like.svg', id:"like-button", class:"typeio-button svg"), like_bulletin_board_typeio_path(:bulletin_board_id => typeio.bulletin_board, :id => typeio), method: :put%>
+          <%= link_to image_tag('icons/dislike.svg', id:"dislike-button", class:"typeio-button svg"), dislike_bulletin_board_typeio_path(:bulletin_board_id => typeio.bulletin_board, :id => typeio), method: :put %>
+        </div>
 
        <!-- TEMP...-->
-      <div class="typeio-likes"><p>pinned</p></div>
 
-      <div id="typeio-button-container">
-        <div class="typeio-button"><p><%= button_to 'Pin', pin_bulletin_board_typeio_path(:bulletin_board_id => typeio.bulletin_board, :id => typeio), method: :patch %></p></div>
-        <div class="typeio-button"><p><%= button_to 'Like', like_bulletin_board_typeio_path(:bulletin_board_id => typeio.bulletin_board, :id => typeio), method: :put %></p></div>
-        <div class="typeio-button"><p><%= button_to 'Dislike', dislike_bulletin_board_typeio_path(:bulletin_board_id => typeio.bulletin_board, :id => typeio), method: :put %></p></div>
-        <div class="typeio-button"><p><%= link_to 'Comments:',typeio_comments_path(typeio)%><%=link_to typeio.comment.count,typeio_comments_path(typeio)%></p></div>
+        <div id="typeio-info-button-container">
+          <%= link_to image_tag('icons/speech-bubble-22.svg', id:"comments-button", class:"typeio-button svg"), typeio_comments_path(typeio)%><%=link_to typeio.comment.count,typeio_comments_path(typeio)%>
+          <%= link_to image_tag('icons/bookmark.svg', id:"pin-button", class:"typeio-button svg"), pin_bulletin_board_typeio_path(:bulletin_board_id => typeio.bulletin_board, :id => typeio), method: :patch %>
+        </div>
 
         <!-- ONLY ALLOW A USER TO EDIT/DESTROY IF THE POST IS THEIRS! -->
+        <div id="typeio-user-buttons">
           <%if typeio.user == current_user%>
-              <div class="typeio-button"><p><%= link_to 'Edit', edit_bulletin_board_typeio_path(@bulletin_board,typeio) %></p></div>
-              <div class="typeio-delete-button"><p><%= link_to 'Delete', bulletin_board_typeio_url(@bulletin_board,typeio) , method: :delete, data: { confirm: 'Are you sure?' } %></p></div>
+            <%= link_to image_tag('icons/edit.svg', id:"edit-button", class:"typeio-button svg"), edit_typeio_path(typeio) %>
+            <%= link_to image_tag('icons/garbage.svg', id:"delete-button", class:"typeio-button svg"), typeio, method: :delete, data: { confirm: 'Are you sure?' } %>
           <%end%>
+        </div>
         <%end%><!-- END RENDER PINNED POSTS-->
       </div>
     </div>

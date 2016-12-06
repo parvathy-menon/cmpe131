@@ -5,13 +5,14 @@
 <div id="comments-container">
   <% @comments.each do |comment| %>
     <div class="comment-cell">
-      <p><%= comment.user.first_name %> <%= comment.user.last_name %></p>
-      <%= comment.body %>
-
-      <%if comment.user == current_user%>
-      <%= link_to 'Edit', edit_typeio_comment_path(comment,@typeio) %>
-      <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' } %>
-      <% end %>
+      <h2><%= comment.user.first_name %> <%= comment.user.last_name %></h2>
+      <p><%= comment.body %></p>
+      <div class="comment-button-container">
+        <%if comment.user == current_user%>
+        <%= link_to 'Edit', edit_typeio_comment_path(comment,@typeio) %>
+        <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+      </div>
     </div>
   <% end %>
   <div id="comment-button-container">

@@ -45,13 +45,19 @@
 
 .typeio-date p
 {
-  font-size: 28px;
+  font-size: 16px;
 }
 
 .typeio-body p
 {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1em;
+}
+
+.typeio-subject p
+{
+  font-size:28px;
+  margin-bottom:5px;
 }
 
 .typeio-delete-button

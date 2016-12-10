@@ -1,5 +1,6 @@
-<h1>New Group</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', groups_path, method: :get %>
+<%= render 'header' %>
+<%= render 'sidebar' %>
+<div id="new-group-container">
+  <%= render 'form' %>
+  <%= link_to 'Back', groups_path, method: :get %>
+</div>

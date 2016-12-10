@@ -1,0 +1,73 @@
+#edit-register-container
+{
+  width: 600px;
+  margin-top:50px;
+  margin-left: auto;
+  margin-right:auto;
+  padding:10px;
+  background-color: #222222;
+  color:#FFFFFF;
+}
+
+#edit-register-container label
+{
+  font-size: 24px;
+}
+
+#edit-register-container .field
+{
+  margin-top: 10px;
+}
+
+#edit-register-container input
+{
+  width:600px;
+  height:30px;
+  font-size: 24px;
+  background-color: #0f0f0f;
+  border:none;
+  padding:3px;
+  color:#68c5db;
+  cursor: pointer;
+}
+
+#edit-register-container em
+{
+  color:#999999;
+}
+
+#update-button
+{
+  margin-top: 20px;
+}
+
+#update-button, #update-button input
+{
+  width:200px;
+  height:auto;
+  margin-left:auto;
+  margin-right:auto;
+  background-color:#0197f6;
+  color:#FFFFFF;
+  padding:5px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#delete-account-button
+{
+  margin-top: 20px;
+}
+
+#delete-account-button, #delete-account-button input
+{
+  width:200px;
+  height:auto;
+  margin-left:auto;
+  margin-right:auto;
+  background-color:#FF0000;
+  color:#FFFFFF;
+  padding:5px;
+  border-radius: 5px;
+  text-align: center;
+}

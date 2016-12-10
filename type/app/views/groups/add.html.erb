@@ -1,14 +1,19 @@
-<h1>INVITE</h1>
-<%= form_for @group, :url => { :action => "update" } do |f| %>
-    
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= text_field_tag(:email) %>
+<%= render 'header' %>
+<%= render 'sidebar' %>
 
-  </div>
-    <%= hidden_field_tag ":group", @group %>
-  
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<div id="new-group-container">
+  <h3>Invite User to Group</h3>
+  <%= form_for @group, :url => { :action => "update" } do |f| %>
+
+    <div class="field">
+      <%= f.label :email %><br>
+      <%= text_field_tag(:email) %>
+
+    </div>
+      <%= hidden_field_tag ":group", @group %>
+
+    <div class="actions" id="add-user-to-group-button">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>
